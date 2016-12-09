@@ -1,0 +1,16 @@
+packetbeat.interfaces.device: any
+
+packetbeat.flows:
+  timeout: 30s
+  period: 10s
+
+packetbeat.protocols.icmp:
+  enabled: true
+
+packetbeat.protocols.fix:
+  ports: [9878]
+
+output.elasticsearch:
+  # Array of hosts to connect to.
+  hosts: ["localhost:9200"]
+
